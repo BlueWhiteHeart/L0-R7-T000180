@@ -1,0 +1,33 @@
+{
+  "name": "souge",
+  "version": "1.0.0",
+  "description": "命令行听歌下载工具",
+  "main": "index.js",
+  "scripts": {
+    "lint:js": "standard index.js && standard lib/*.js --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:js",
+      "pre-push": "npm run lint:js"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "standard": "^14.3.4"
+  },
+  "keywords": [
+    "工具",
+    "听歌",
+    "CLI"
+  ],
+  "license": "ISC",
+  "bin": {
+    "souge": "./bin/souge"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.2",
+    "single-line-log": "^1.1.2"
+  }
+}
